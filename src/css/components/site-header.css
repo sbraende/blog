@@ -1,0 +1,38 @@
+.site-header {
+  width: 100%;
+  max-width: 800px;
+  padding: var(--spacing-small) var(--spacing-small);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 2px solid var(--color-medium-gray);
+}
+
+.site-header__title {
+  font-weight: 400;
+}
+
+.page-header__title {
+  font-weight: 500;
+}
+
+.site-header__nav-list {
+  display: flex;
+  gap: var(--spacing-medium);
+}
+
+.active-link {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.site-header__nav-list li a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+@media screen and (max-width: 640px) {
+  .page-header__title {
+    display: none;
+  }
+}

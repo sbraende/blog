@@ -1,0 +1,12 @@
+.site-footer {
+  padding: var(--spacing-large) 0 4rem 0;
+}
+
+.site-footer__link {
+  padding: var(--spacing-x-small);
+  border-radius: var(--spacing-small);
+}
+
+.site-footer__link:hover {
+  background-color: var(--color-medium-gray);
+}

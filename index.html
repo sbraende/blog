@@ -4,10 +4,86 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>seb-dev</title>
+    <link rel="stylesheet" href="./src/css/styles.css" />
+    <title>seb-dev - blog</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <header class="site-header">
+      <a class="site-header__title-link" href="/"><h1 class="site-header__title">seb-dev</h1></a>
+      <a class="page-header__title-link" href="/"><h1 class="page-header__title">Blog</h1></a>
+      <nav class="site-header__nav">
+        <ol class="site-header__nav-list">
+          <li><a class="active-link" href="/">Blogg</a></li>
+          <li><a href="./src/html/pages/about.html">About</a></li>
+        </ol>
+      </nav>
+    </header>
+    <main>
+      <section class="sortSearch">
+        <div class="sort-container">
+          <label class="sort__label" for="sort">Sort</label>
+          <img class="sort__icon icon" src="/assets/icons/sort.svg" alt="Sort icon" />
+          <select class="sort__select" name="sort" id="sort">
+            <option value="newest-first">Newest first</option>
+            <option value="oldest-first">Oldest first</option>
+            <option value="shortest-read">Shortest read</option>
+            <option value="longest-read">Longest read</option>
+          </select>
+        </div>
+        <div class="search-container">
+          <label class="search__label" for="search__label">Search</label>
+          <img class="search__icon" src="/assets/icons/search.svg" alt="Sort icon" />
+          <input class="search__input" type="text" name="search" id="search" />
+        </div>
+      </section>
+      <section class="blog">
+        <ol class="blog-list">
+          <!-- Blogpost-1 -->
+          <li class="blog-item">
+            <a class="blog-item__container" href="/blogpost1.html">
+              <div class="blog-list__text-details-container">
+                <div class="blog-item__title-description-container">
+                  <h3 class="blog-item__title">Norway fun facts Quiz</h3>
+                  <p class="blog-item__description">
+                    Interactive quiz about Norwegian culture, built with responsive HTML, CSS, and JS.
+                  </p>
+                </div>
+                <div class="blog-item__details-container">
+                  <div class="blog-item__date-readtime-container">
+                    <div class="blog-item__date_container">
+                      <img src="/assets/icons/calendar.svg" alt="Calendar icon" />
+                      <span>10. des. 2024</span>
+                    </div>
+                    <div class="blog-item__readtime-container">
+                      <img src="/assets/icons/clock.svg" alt="Clock icon" />
+                      <span>6 min</span>
+                    </div>
+                  </div>
+                  <div class="blog-item__share-container">
+                    <button class="blog-item__share-button">
+                      <img src="/assets/icons/share.svg" alt="Share icon" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="blog-list__image-container">
+                <img
+                  class="blog-list__image"
+                  src="/assets/images/blogposts/norway-quiz/norway-quiz-thumbnail.webp"
+                  alt="Screenshot of StarWars website"
+                />
+              </div>
+            </a>
+          </li>
+        </ol>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>
+        <a class="site-footer__link" href="https://bsky.app/" target="_blank">🦋 Bluesky</a> |
+        <a class="site-footer__link" href="https://github.com/sbraende/" target="_blank">🐈‍⬛ GitHub</a>
+      </p>
+    </footer>
+    <!-- <script type="module" src="/src/main.js"></script> -->
   </body>
 </html>

@@ -1,0 +1,140 @@
+main {
+  width: 90%;
+  max-width: 800px;
+  padding: var(--spacing-large) var(--spacing-small) var(--spacing-medium) var(--spacing-small);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-medium);
+}
+
+/* SORT AND SEARCH */
+.sortSearch {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sort-container,
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+}
+
+.sort__icon,
+.search__icon {
+  display: none;
+}
+
+.sort__select,
+.search__input {
+  min-width: 150px;
+  max-width: 150px;
+  font-family: inherit;
+  padding: var(--spacing-x-small) var(--spacing-x-small);
+}
+
+/* BLOG-LIST */
+
+.blog {
+  width: 100%;
+}
+
+.blog-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.blog-item {
+  width: 100%;
+}
+
+.blog-item__container {
+  padding: var(--spacing-medium) var(--spacing-medium);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-light-gray);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-medium);
+}
+
+.blog-list__text-details-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-item__title-description-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.blog-item__description {
+  color: var(--color-dark-gray);
+}
+
+.blog-item__details-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog-item__date-readtime-container {
+  width: 100%;
+  display: flex;
+  gap: var(--spacing-medium);
+}
+
+.blog-item__date_container,
+.blog-item__readtime-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-x-small);
+}
+
+.blog-item__share-button {
+  padding: var(--spacing-x-small);
+  border: none;
+  border-radius: var(--spacing-small);
+  background-color: transparent;
+}
+
+.blog-item__share-button:hover {
+  background-color: var(--color-medium-gray);
+}
+
+.blog-list__image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: var(--border-radius-small);
+}
+
+@media screen and (max-width: 640px) {
+  .blog-list__image {
+    display: none;
+  }
+
+  .sort__label,
+  .search__label {
+    display: none;
+  }
+
+  .sort__icon,
+  .search__icon {
+    display: block;
+  }
+
+  .sort__select,
+  .search__input {
+    min-width: 0;
+    max-width: 150px;
+    width: 120px;
+  }
+}

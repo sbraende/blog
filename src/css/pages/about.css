@@ -1,0 +1,14 @@
+.about {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-medium);
+  text-align: center;
+}
+
+.about__profile-picture {
+  width: 200px;
+  object-fit: cover;
+  border-radius: var(--border-radius-small);
+}
