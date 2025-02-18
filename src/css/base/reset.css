@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+ul,
 ol {
   list-style: none;
 }
@@ -14,5 +15,12 @@ button {
 
 a {
   text-decoration: none;
-  color: black;
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
 }

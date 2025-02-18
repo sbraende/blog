@@ -6,6 +6,8 @@
 
 @import "./components/site-header.css";
 @import "./components/site-footer.css";
+@import "./components/blogpost-details.css";
 
 @import "./pages/about.css";
 @import "./pages/blogg.css";
+@import "./pages/bloggpost.css";
