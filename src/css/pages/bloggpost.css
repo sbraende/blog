@@ -21,6 +21,42 @@
   gap: var(--spacing-medium);
 }
 
+/* BLOGPOST-DETAILS */
+.blogpost__details-container {
+  width: 100%;
+  padding: var(--spacing-small) 0;
+  border-top: 2px solid var(--color-light-gray);
+  border-bottom: 2px solid var(--color-light-gray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-dark-gray);
+}
+
+.blogpost__date-readtime-container {
+  width: 100%;
+  display: flex;
+  gap: var(--spacing-medium);
+}
+
+.blogpost__date_container,
+.blogpost__readtime-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-x-small);
+}
+
+.blogpost__share-button {
+  padding: var(--spacing-x-small);
+  border: none;
+  border-radius: var(--spacing-small);
+  background-color: transparent;
+}
+
+.blogpost__share-button:hover {
+  background-color: var(--color-medium-gray);
+}
+
 /* BLOGPOST CONTENT */
 .blogpost__content {
   width: 100%;
