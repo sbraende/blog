@@ -6,42 +6,72 @@ const blogList = document.querySelector(".blog-list");
 
 // RENDER BLOG LIST
 blogPostList.forEach((blogPost) => {
+  // 1. Create elements
   const blogItem = document.createElement("li");
+  const blogLink = document.createElement("a");
+  const textDetailsContainer = document.createElement("div");
+  const titleDescriptionContainer = document.createElement("div");
+  const title = document.createElement("h3");
+  const description = document.createElement("p");
+  const detailsContainer = document.createElement("div");
+  const dateReadtimeContainer = document.createElement("div");
+  const dateContainer = document.createElement("div");
+  const dateIcon = document.createElement("img");
+  const publishDate = document.createElement("span");
+  const readtimeContainer = document.createElement("div");
+  const clockIcon = document.createElement("img");
+  const readTime = document.createElement("span");
+  const shareContainer = document.createElement("div");
+  const shareButton = document.createElement("button");
+  const shareIcon = document.createElement("img");
+  const imageContainer = document.createElement("div");
+  const image = document.createElement("img");
 
-  blogItem.innerHTML = `
-            <a class="blog-item__container" href="${blogPost.path}">
-              <div class="blog-item__text-details-container">
-                <div class="blog-item__title-description-container">
-                  <h3 class="blog-item__title">${blogPost.title}</h3>
-                  <p class="blog-item__description">${blogPost.description}</p>
-                </div>
-                <div class="blog-item__details-container">
-                  <div class="blog-item__date-readtime-container">
-                    <div class="blog-item__date_container">
-                      <img src="/assets/icons/calendar.svg" alt="Calendar icon" />
-                      <span class="publish-date">${blogPost.publishdate}</span>
-                    </div>
-                    <div class="blog-item__readtime-container">
-                      <img src="/assets/icons/clock.svg" alt="Clock icon" />
-                      <span class="read-time">${blogPost.readlength}</span>
-                    </div>
-                  </div>
-                  <div class="blog-item__share-container">
-                    <button class="blog-item__share-button">
-                      <img src="/assets/icons/share.svg" alt="Share icon" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="blog-item__image-container">
-                <img
-                  class="blog-item__image"
-                  src="${blogPost.thumbnail}"
-                  alt="Screenshot of StarWars website"
-                />
-              </div>
-            </a>
-  `;
+  // 2. Assign classes
+  blogItem.className = "blog-item";
+  blogLink.className = "blog-item__container";
+  textDetailsContainer.className = "blog-item__text-details-container";
+  titleDescriptionContainer.className = "blog-item__title-description-container";
+  title.className = "blog-item__title";
+  description.className = "blog-item__description";
+  detailsContainer.className = "blog-item__details-container";
+  dateReadtimeContainer.className = "blog-item__date-readtime-container";
+  dateContainer.className = "blog-item__date_container";
+  publishDate.className = "publish-date";
+  readtimeContainer.className = "blog-item__readtime-container";
+  readTime.className = "read-time";
+  shareContainer.className = "blog-item__share-container";
+  shareButton.className = "blog-item__share-button";
+  imageContainer.className = "blog-item__image-container";
+  image.className = "blog-item__image";
+
+  // 3. Set attributes and content
+  blogLink.href = blogPost.path;
+  title.textContent = blogPost.title;
+  description.textContent = blogPost.description;
+  dateIcon.src = "/assets/icons/calendar.svg";
+  dateIcon.alt = "Calendar icon";
+  publishDate.textContent = blogPost.publishdate;
+  clockIcon.src = "/assets/icons/clock.svg";
+  clockIcon.alt = "Clock icon";
+  readTime.textContent = blogPost.readlength;
+  shareIcon.src = "/assets/icons/share.svg";
+  shareIcon.alt = "Share icon";
+  image.src = blogPost.thumbnail;
+  image.alt = `Thumbnail of ${blogPost.title}`;
+
+  // 4. Append elements in correct structure
+  dateContainer.append(dateIcon, publishDate);
+  readtimeContainer.append(clockIcon, readTime);
+  dateReadtimeContainer.append(dateContainer, readtimeContainer);
+  shareButton.append(shareIcon);
+  shareContainer.append(shareButton);
+  detailsContainer.append(dateReadtimeContainer, shareContainer);
+  titleDescriptionContainer.append(title, description);
+  textDetailsContainer.append(titleDescriptionContainer, detailsContainer);
+  imageContainer.append(image);
+  blogLink.append(textDetailsContainer, imageContainer);
+  blogItem.append(blogLink);
   blogList.append(blogItem);
 });
 
