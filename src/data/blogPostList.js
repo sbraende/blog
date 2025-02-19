@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from "uuid";
 
 const blogPostList = [
   {
-    id: uuidv4(),
+    id: "blogpost-template",
     title: "Template blogpost",
     description: "A temporary blogpost used for testing website",
     path: "./src/html/blogposts/blogpost-template.html",
@@ -11,7 +11,7 @@ const blogPostList = [
     readlength: 6,
   },
   {
-    id: uuidv4(),
+    id: "norway-quiz",
     title: "Norway fun fact Quiz",
     description: "Interactive quiz about Norwegian culture, built with responsive HTML, CSS, and JS.",
     path: "./src/html/blogposts/norway-quiz.html",
@@ -20,7 +20,7 @@ const blogPostList = [
     readlength: 6,
   },
   {
-    id: uuidv4(),
+    id: "components-viewer",
     title: "Components Viewer",
     description: "Showcase of 8 UI components and states, built with responsive HTML, CSS, and JS.",
     thumbnail: "/assets/images/blogposts/components-viewer/components-viewer-thumbnail.webp",

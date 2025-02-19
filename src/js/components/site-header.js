@@ -30,7 +30,7 @@ const renderSiteHeader = (pageName) => {
   siteTitle.textContent = pageName;
   blogAnchor.href = "/";
   blogAnchor.textContent = "Blogg";
-  aboutAnchor.href = "./src/html/pages/about.html";
+  aboutAnchor.href = "/src/html/pages/about.html";
   aboutAnchor.textContent = "About";
 
   // Append elements
