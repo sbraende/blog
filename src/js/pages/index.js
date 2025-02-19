@@ -1,4 +1,9 @@
 import blogPostList from "../../data/blogPostList.js";
+import renderSiteHeader from "../components/site-header.js";
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderSiteHeader("Blog");
+});
 
 // SELECTORS
 // const shareButton = document.querySelector(".blogpostDetails__share-button");
@@ -6,7 +11,7 @@ const blogList = document.querySelector(".blog-list");
 
 // RENDER BLOG LIST
 blogPostList.forEach((blogPost) => {
-  // 1. Create elements
+  // Create elements
   const blogItem = document.createElement("li");
   const blogLink = document.createElement("a");
   const textDetailsContainer = document.createElement("div");
@@ -27,7 +32,7 @@ blogPostList.forEach((blogPost) => {
   const imageContainer = document.createElement("div");
   const image = document.createElement("img");
 
-  // 2. Assign classes
+  // Assign classes
   blogItem.className = "blog-item";
   blogLink.className = "blog-item__container";
   textDetailsContainer.className = "blog-item__text-details-container";
@@ -45,7 +50,7 @@ blogPostList.forEach((blogPost) => {
   imageContainer.className = "blog-item__image-container";
   image.className = "blog-item__image";
 
-  // 3. Set attributes and content
+  // Set attributes and content
   blogLink.href = blogPost.path;
   title.textContent = blogPost.title;
   description.textContent = blogPost.description;
@@ -60,7 +65,7 @@ blogPostList.forEach((blogPost) => {
   image.src = blogPost.thumbnail;
   image.alt = `Thumbnail of ${blogPost.title}`;
 
-  // 4. Append elements in correct structure
+  // Append elements
   dateContainer.append(dateIcon, publishDate);
   readtimeContainer.append(clockIcon, readTime);
   dateReadtimeContainer.append(dateContainer, readtimeContainer);

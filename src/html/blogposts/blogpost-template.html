@@ -5,103 +5,13 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../css/styles.css" />
-    <title>seb-dev - Norway Quiz</title>
+    <title>seb-dev - Blogpost template</title>
   </head>
   <body>
-    <header class="site-header">
-      <a class="site-header__title-link" href="/"><h1 class="site-header__title">seb-dev</h1></a>
-      <a class="page-header__title-link" href="/"><h1 class="page-header__title">Blog</h1></a>
-      <nav class="site-header__nav">
-        <ol class="site-header__nav-list">
-          <li><a href="/">Blogg</a></li>
-          <li><a href="../pages/about.html">About</a></li>
-        </ol>
-      </nav>
-    </header>
+    <header class="site-header"></header>
     <main class="blogpost-main">
       <section class="blogpost">
-        <!-- HEADER SHOULD BE AUTOMATIC -->
-        <header class="blogpost__header">
-          <h1 class="blogpost__title">Norway fun facts Quiz</h1>
-          <div class="blogpost__text-details-container">
-            <div class="blogpost__details-container">
-              <div class="blogpost__date-readtime-container">
-                <div class="blogpost__date_container">
-                  <img src="/assets/icons/calendar.svg" alt="Calendar icon" />
-                  <span class="publish-date">10. des. 2024</span>
-                </div>
-                <div class="blogpost__readtime-container">
-                  <img src="/assets/icons/clock.svg" alt="Clock icon" />
-                  <span class="read-time">6 min</span>
-                </div>
-              </div>
-              <div class="blogpost__share-container">
-                <button class="blogpost__share-button">
-                  <img src="/assets/icons/share.svg" alt="Share icon" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </header>
-        <div class="blogpost__content" data-id="norway-quiz">
-          <h2>
-            This project, completed in about two weeks of part-time work for Høyskolen Kristiania, features an
-            interactive quiz with eight questions designed to be accessible, light-hearted, and fun!
-          </h2>
-          <figure>
-            <img
-              class="img-small"
-              src="/assets/images/blogposts/norway-quiz/screenshot.png"
-              alt="Screenshot of the quiz"
-            />
-            <figcaption>Screenshot of the quiz</figcaption>
-          </figure>
-
-          <h3>Process</h3>
-          <p>
-            I used ChatGPT to generate quiz questions about Norway, then carefully filtered and double-checked the
-            answers for accuracy. The project had a quick turnaround, so I focused on creating a user-friendly and
-            engaging experience.
-          </p>
-
-          <h3>Code</h3>
-          <p>
-            The coding process involved continuous improvement. While exploring VS Code, I discovered the
-            <i>"Refactor"</i> button, which may have led to some over-abstraction in certain code sections. However, the
-            core logic functions well and withstood testing. Ideally, the submit/review logic wouldn't be called from
-            within another loop, but this is an area for future refinement.
-          </p>
-
-          <figure>
-            <img
-              class="img-standard"
-              src="/assets/images/blogposts/norway-quiz/mockups.png"
-              alt="Design concepts made in Figma"
-            />
-            <figcaption>Design concepts made in Figma</figcaption>
-          </figure>
-
-          <h3>Design</h3>
-          <p>
-            I aimed for a minimalist and modern design. After exploring various sources, I drew inspiration primarily
-            from
-            <a href="https://brilliant.org/home/" target="_blank">Brilliant.org</a> and designs by
-            <a href="https://dribbble.com/kpdesigns" target="_blank">Paresh Khatri</a> on Dribbble.
-          </p>
-
-          <h3>Links</h3>
-          <p>
-            Published website:
-            <a class="link" href="https://sbraende-quiz.netlify.app/quiz" target="_blank"
-              >https://sbraende-quiz.netlify.app/quiz</a
-            >
-          </p>
-          GitHub repository:
-          <a class="link" href="https://github.com/sbraende/norway-quiz" target="_blank"
-            >https://github.com/sbraende/norway-quiz</a
-          >
-          <p></p>
-        </div>
+        <!-- INSERT BLOGPOST CONTENT -->
       </section>
     </main>
     <footer class="site-footer">
@@ -110,5 +20,6 @@
         <a class="site-footer__link" href="https://github.com/sbraende/" target="_blank">🐈‍⬛ GitHub</a>
       </p>
     </footer>
+    <script type="module" src="../../js/pages/blogposts.js"></script>
   </body>
 </html>
