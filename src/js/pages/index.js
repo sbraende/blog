@@ -1,7 +1,9 @@
 import blogPostList from "../../data/blogPostList.js";
+import { dateToString } from "../core/date.js";
 import renderSiteHeader from "../components/site-header.js";
 import renderSiteFooter from "../components/site-footer.js";
 
+// FUNCTIONS
 const renderBlogList = () => {
   // Select
   const blogList = document.querySelector(".blog-list");
@@ -52,7 +54,7 @@ const renderBlogList = () => {
     description.textContent = blogPost.description;
     dateIcon.src = "/assets/icons/calendar.svg";
     dateIcon.alt = "Calendar icon";
-    publishDate.textContent = blogPost.publishdate;
+    publishDate.textContent = dateToString(blogPost.publishdate);
     clockIcon.src = "/assets/icons/clock.svg";
     clockIcon.alt = "Clock icon";
     readTime.textContent = blogPost.readlength;
@@ -77,6 +79,7 @@ const renderBlogList = () => {
   });
 };
 
+// INITIALIZATION
 document.addEventListener("DOMContentLoaded", () => {
   renderSiteHeader("Blog");
   renderBlogList();
