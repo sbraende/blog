@@ -1,5 +1,5 @@
 const renderSiteHeader = (pageName) => {
-  // SELECTOR
+  // Select
   const header = document.querySelector(".site-header");
 
   // Create elements
