@@ -1,4 +1,6 @@
 import { dateToString } from "../core/date";
+import copyLinkToClipboard from "../logic/share";
+import renderShareModal from "./shareModal";
 
 // FUNCTIONS
 const renderBlogList = (blogPostArray) => {
@@ -73,6 +75,15 @@ const renderBlogList = (blogPostArray) => {
     blogLink.append(textDetailsContainer, imageContainer);
     blogItem.append(blogLink);
     blogList.append(blogItem);
+
+    // Event listeners
+    shareButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      copyLinkToClipboard(blogPost.path);
+      renderShareModal(e.currentTarget, blogPost.title);
+    });
   });
 };
 

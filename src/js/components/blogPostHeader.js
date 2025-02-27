@@ -1,12 +1,12 @@
 import blogPostList from "../../data/blogPostList.js";
 import { dateToString } from "../core/date.js";
+import copyLinkToClipboard from "../logic/share.js";
+import renderShareModal from "./shareModal.js";
 
 const renderBlogPostHeader = () => {
   // Get blogpost details
   const blogPostElement = document.querySelector(".blogpost");
-  const blogPostDetails = blogPostList.find(
-    (blogpost) => blogpost.id === blogPostElement.dataset.id
-  );
+  const blogPost = blogPostList.find((blogpost) => blogpost.id === blogPostElement.dataset.id);
 
   // Select
   const blogPostHeader = document.querySelector(".blogpost__header");
@@ -39,15 +39,15 @@ const renderBlogPostHeader = () => {
   shareButton.className = "blogpost__share-button";
 
   // Set attributes and content
-  title.textContent = blogPostDetails.title;
+  title.textContent = blogPost.title;
 
   dateIcon.src = "/assets/icons/calendar.svg";
   dateIcon.alt = "Calendar icon";
-  dateSpan.textContent = dateToString(blogPostDetails.publishdate);
+  dateSpan.textContent = dateToString(blogPost.publishdate);
 
   readTimeIcon.src = "/assets/icons/clock.svg";
   readTimeIcon.alt = "Clock icon";
-  readTimeSpan.textContent = blogPostDetails.readlength;
+  readTimeSpan.textContent = blogPost.readlength;
 
   shareIcon.src = "/assets/icons/share.svg";
   shareIcon.alt = "Share icon";
@@ -62,6 +62,15 @@ const renderBlogPostHeader = () => {
   textDetailsContainer.append(detailsContainer);
 
   blogPostHeader.append(title, textDetailsContainer);
+
+  // Event listeners
+  shareButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    copyLinkToClipboard(blogPost.path);
+    renderShareModal(e.currentTarget, blogPost.title);
+  });
 };
 
 export default renderBlogPostHeader;

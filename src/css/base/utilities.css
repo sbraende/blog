@@ -5,3 +5,11 @@
 .link {
   text-decoration: underline;
 }
+
+.error {
+  color: red;
+}
+
+.hidden {
+  display: none;
+}

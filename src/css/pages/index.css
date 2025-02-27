@@ -106,6 +106,7 @@
 }
 
 .blog-item__share-button {
+  position: relative;
   padding: var(--spacing-x-small);
   border: none;
   border-radius: var(--spacing-small);

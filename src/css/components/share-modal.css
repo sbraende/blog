@@ -1,0 +1,10 @@
+.share-modal {
+  position: absolute;
+  width: max-content;
+  padding: var(--spacing-small) var(--spacing-medium);
+  border-radius: var(--border-radius-medium);
+  box-shadow: 0 0 10px var(--color-dark-gray);
+  background-color: var(--color-light-gray);
+  text-align: center;
+  transform: translateX(-50%);
+}
