@@ -21,6 +21,11 @@
   gap: var(--spacing-medium);
 }
 
+.blogpost__header h1 {
+  font-size: var(--font-size-x-large);
+  font-weight: 400;
+}
+
 /* BLOGPOST-DETAILS */
 .blogpost__details-container {
   width: 100%;
@@ -65,8 +70,13 @@
   gap: var(--spacing-small);
 }
 
+.blogpost__content p {
+  color: var(--color-dark-gray);
+}
+
 .blogpost__content h2 {
   font-weight: 400;
+  font-size: 1.3rem;
   color: var(--color-dark-gray);
 }
 

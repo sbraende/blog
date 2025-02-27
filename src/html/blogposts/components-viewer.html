@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg" href="/assets/icons/diamond-with-a-dot.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <script type="module" src="../../js/pages/blogposts.js"></script>
+    <title>seb-dev - Components viewer</title>
+  </head>
+  <body>
+    <header class="site-header"></header>
+    <main class="blogpost-main">
+      <section class="blogpost" data-id="components-viewer">
+        <header class="blogpost__header"></header>
+        <div class="blogpost__content">
+          <!-- INSERT BLOGPOST CONTENT -->
+          <h2>
+            This project was a induvidual student assignment for Høyskolen Kristiania. It features a
+            components viewer for organizing and showcasing reusable UI elements.
+          </h2>
+          <figure>
+            <img
+              class="img-standard"
+              src="/assets/images/blogposts/components-viewer/components-viewer_desktop.png"
+              alt="Components viewer interface"
+            />
+            <figcaption>Components viewer interface</figcaption>
+          </figure>
+
+          <h3>Goals</h3>
+          <p>
+            Part of the requirement was to create eight different components and display at least
+            two states for them. Core functionality was the ability to click at different components
+            to view them. In addition I added a <i>Add mode</i> for viewing components. In this mode
+            you could click on mulitple components to view them.
+          </p>
+
+          <h3>Code</h3>
+          <p>
+            Only vanilla HTML, CSS and JavaScript was allowed for this project. The CSS was split
+            into multiple files for each component to make them more modular and easier to modify in
+            the future. The Sidebar-buttons are dynamically created based on the components in the
+            HTML.
+          </p>
+          <h3>Links</h3>
+          <p>
+            Published website:
+            <a class="link" href="https://sbraende-components.netlify.app/" target="_blank"
+              >https://sbraende-components.netlify.app/</a
+            >
+          </p>
+          <p>
+            GitHub repository:
+            <a class="link" href="https://github.com/sbraende/components-viewer" target="_blank"
+              >https://github.com/sbraende/components-viewer</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"></footer>
+  </body>
+</html>
