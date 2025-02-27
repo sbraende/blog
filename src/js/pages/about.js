@@ -1,5 +1,5 @@
-import renderSiteHeader from "../components/site-header";
-import renderSiteFooter from "../components/site-footer";
+import renderSiteHeader from "../components/siteHeader";
+import renderSiteFooter from "../components/siteFooter";
 
 document.addEventListener("DOMContentLoaded", () => {
   renderSiteHeader("About");

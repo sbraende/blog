@@ -11,7 +11,8 @@ const blogPostList = [
   {
     id: "norway-quiz",
     title: "Norway fun fact Quiz",
-    description: "Interactive quiz about Norwegian culture, built with responsive HTML, CSS, and JS.",
+    description:
+      "Interactive quiz about Norwegian culture, built with responsive HTML, CSS, and JS.",
     path: "./src/html/blogposts/norway-quiz.html",
     thumbnail: "/assets/images/blogposts/norway-quiz/norway-quiz-thumbnail.webp",
     publishdate: new Date("2024-12-10"),
