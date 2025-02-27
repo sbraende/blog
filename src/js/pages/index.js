@@ -3,15 +3,23 @@ import renderBlogList from "../components/blogList.js";
 import renderSiteFooter from "../components/siteFooter.js";
 import blogList from "../../data/blogPostList.js";
 import sortBlogPosts from "../logic/sort.js";
+import searchBlogPosts from "../logic/search.js";
 
 // SELECT
-const searchInput = document.querySelector(".search__input");
 const sortSelect = document.querySelector(".sort__select");
+const searchInput = document.querySelector(".search__input");
 
 // EVENT-LISTENERS
 sortSelect.addEventListener("change", () => {
-  const sortedArray = sortBlogPosts(sortSelect, blogList);
-  renderBlogList(sortedArray);
+  const filteredList = searchBlogPosts(searchInput, blogList);
+  const sortedList = sortBlogPosts(sortSelect, filteredList);
+  renderBlogList(sortedList);
+});
+
+searchInput.addEventListener("input", () => {
+  const filteredList = searchBlogPosts(searchInput, blogList);
+  const sortedList = sortBlogPosts(sortSelect, filteredList);
+  renderBlogList(sortedList);
 });
 
 // INITIALIZATION
